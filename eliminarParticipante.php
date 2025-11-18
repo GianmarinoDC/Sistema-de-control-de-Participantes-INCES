@@ -1,42 +1,26 @@
 <?php
-require_once 'managerCurso.php';
+// llamado al archivo managerParticipante.php 
+require_once 'managerParticipante.php';
 
-header('Content-Type: application/json');
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
+    $idParticipante = $_POST['id'];
 
-try {
-    // Recibir y validar datos
-    $json = file_get_contents('php://input');
-    $data = json_decode($json, true);
+    try {
+        // Instanciar la clase y llamar al método eliminar
+        $participante = new Participante();
+        $response = $participante->eliminar($idParticipante);
 
-    // Validaciones estrictas
-    if ($data === null) {
-        throw new Exception("Error: Datos JSON inválidos o vacíos");
+        echo json_encode($response);
+    } catch (Exception $e) {
+        echo json_encode([
+            "success" => false,
+            "message" => "Error interno: " . $e->getMessage()
+        ]);
     }
-    
-    if (!isset($data['id_participante_curso']) || !is_numeric($data['id_participante_curso'])) {
-        throw new InvalidArgumentException("Error: ID de participante inválido");
-    }
-
-    $curso = new Curso();
-    $success = $curso->eliminarParticipante($data['id_participante_curso']);
-    
+} else {
     echo json_encode([
-        'success' => $success,
-        'message' => $success ? 'Eliminación exitosa' : 'No se pudo eliminar'
-    ]);
-
-} catch(InvalidArgumentException $e) {
-    error_log($e->getMessage());
-    http_response_code(400);
-    echo json_encode([
-        'success' => false,
-        'error' => $e->getMessage()
-    ]);
-} catch(Exception $e) {
-    error_log("Error general: " . $e->getMessage());
-    http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'error' => 'Error interno del servidor'
+        "success" => false,
+        "message" => "ID no recibido o método HTTP incorrecto"
     ]);
 }
+?>

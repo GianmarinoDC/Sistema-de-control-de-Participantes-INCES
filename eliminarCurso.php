@@ -1,17 +1,34 @@
 <?php
-require_once 'managerDocenteCurso.php';
+require_once 'managerParticipanteCurso.php';
+require_once '../../modelo/conexion.php';
+
 header('Content-Type: application/json');
 
-if (isset($_POST['id_docente_curso']) && !empty($_POST['id_docente_curso'])) {
-    $gestor = new DocenteCurso();
-    $id = intval($_POST['id_docente_curso']);
-    $success = $gestor->eliminarCursoDocente($id);
-
-    if ($success) {
-        echo json_encode(['success' => true]);
-    } else {
-        echo json_encode(['success' => false, 'error' => 'No se pudo eliminar el curso de la base de datos']);
+try {
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        throw new Exception("Método no permitido", 405);
     }
-} else {
-    echo json_encode(['success' => false, 'error' => 'Datos incompletos o inválidos']);
+
+    $id_participante_curso = filter_input(INPUT_POST, 'id_participante_curso', FILTER_VALIDATE_INT);
+    $id_participante = filter_input(INPUT_POST, 'id_participante', FILTER_VALIDATE_INT);
+
+    if (!$id_participante_curso || !$id_participante) {
+        // En vez de lanzar un error con el mensaje de "Datos inválidos", simplemente retorna success: false
+        echo json_encode(['success' => false]);
+        exit;
+    }
+
+    $participanteCurso = new ParticipanteCurso();
+    $resultado = $participanteCurso->eliminarCurso($id_participante_curso, $id_participante);
+
+    echo json_encode($resultado);
+
+} catch (Exception $e) {
+    http_response_code($e->getCode() ?: 500);
+    echo json_encode([
+        'success' => false,
+        'error' => $e->getMessage()
+    ]);
 }
+
+exit;

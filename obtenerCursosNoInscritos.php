@@ -1,21 +1,15 @@
 <?php
-require_once 'managerDocenteCurso.php';
+require_once 'managerParticipanteCurso.php';
+header('Content-Type: application/json');
 
-$id_docente = $_GET['id_docente'] ?? null;
+if (isset($_GET['id_participante'])) {
+    $id_participante = $_GET['id_participante'];
 
-if ($id_docente) {
-    $modelo = new DocenteCurso();
-    $cursos = $modelo->obtenerCursosNoAsignados($id_docente);
-    $data = [];
+    $participanteCurso = new ParticipanteCurso();
+    $cursosNoInscritos = $participanteCurso->obtenerCursosNoInscritos($id_participante);
 
-    foreach ($cursos as $curso) {
-        $data[] = [
-            'id_curso' => $curso['id_curso'],
-            'display' => $curso['nombre_curso']
-        ];
-    }
-
-    echo json_encode($data);
+    echo json_encode($cursosNoInscritos);
 } else {
-    echo json_encode([]);
+
 }
+?>

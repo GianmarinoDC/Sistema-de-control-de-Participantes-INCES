@@ -1,0 +1,173 @@
+.btn-add{
+    width: 20.5%;
+    min-width: 200px;
+}
+
+
+.text{
+    color: #8f8f8f;
+}
+
+.search-bar{
+    max-width: 599px;
+
+}
+
+
+
+/* Estilos para el modal */
+#modal-participanteCurso .modal-content {
+    border-radius: 15px;
+}
+
+#modal-participanteCurso .modal-header {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.scrollable-list {
+    max-height: 50vh;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 8px 0;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.list-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.participante-info {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.participante-info .cedula {
+    display: block;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+#busqueda-participantes {
+    border-radius: 20px;
+    padding: 12px 20px;
+    border: 2px solid #dee2e6;
+}
+
+#estado-curso {
+    font-size: 1.1em;
+    padding: 8px 15px;
+}
+
+
+
+#modal-viewCurso .modal-content {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#modal-viewCurso .modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#modal-viewCurso .btn-close-white {
+  filter: invert(1);
+}
+
+#modal-viewCurso .info-card,
+#modal-viewCurso .progress-section,
+#modal-viewCurso .teacher-info {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+  height: 100%;  /* Se ajusta para ocupar todo el espacio disponible */
+  min-height: 500px;  /* O la altura que prefieras */
+}
+
+#modal-viewCurso .progress-circle {
+  position: relative;
+}
+
+#modal-viewCurso .progress-svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+#modal-viewCurso .progress-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 10;
+}
+
+#modal-viewCurso .progress-bar {
+  fill: none;
+  stroke: #2ecc71;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray 0.4s ease;
+}
+
+#modal-viewCurso #circle-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#modal-viewCurso .progress {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#modal-viewCurso .progress-bar {
+  transition: width 0.4s ease;
+}
+
+#modal-viewCurso .table-responsive {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#modal-viewCurso .table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#modal-viewCurso .table td {
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+#modal-viewCurso .table-hover tbody tr:hover {
+  background-color: #f0f8ff;
+}
+
+#modal-viewCurso .badge {
+  font-size: 0.9rem;
+  padding: 0.5em 0.75em;
+  border-radius: 5px;
+}
+
+#modal-viewCurso .row.g-4 > * {
+  margin-bottom: 1rem;
+}

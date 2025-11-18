@@ -1,0 +1,395 @@
+/* Definir la fuente Roboto Regular */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-Regular.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Definir la fuente Roboto Bold */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-Bold.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-Bold.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Definir la fuente Roboto Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-Italic.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-Italic.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Definir la fuente Roboto Bold Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-BoldItalic.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-BoldItalic.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Configuración Global */
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#modal-viewParticipante .list-group-item {
+    border: none;
+    padding: 0.8rem 1rem;
+    background-color: #f8f9fa;
+}
+
+#modal-viewParticipante .curso-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    transition: transform 0.2s;
+}
+
+#modal-viewParticipante .curso-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+#modal-viewParticipante .table th {
+    background-color: #f1f4f7;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+#modal-viewParticipante .modal-section {
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#modal-viewParticipante .modal-section:last-child {
+    border-bottom: none;
+}
+
+#modal-viewParticipante .alert {
+    border-radius: 12px;
+    background-color: #f8f9fa;
+}
+
+
+
+.asignar-card {
+    height: 100%;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.asignar-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+
+.asignar-card .badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+}
+
+.asignar-card .btn {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+}
+
+
+.curso-card {
+    transition: transform 0.2s;
+    border: 1px solid rgba(0,0,0,0.125);
+}
+
+.curso-card:hover {
+    transform: translateY(-2px);
+}
+
+.btn-desinscribir {
+    transition: all 0.2s ease;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-desinscribir .btn-text {
+    position: relative;
+    top: -1px;
+}
+
+.btn-desinscribir:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.2);
+}
+
+/* Versión con icono + texto (opcional) */
+.btn-desinscribir.con-icono {
+    padding: 0.2rem 0.5rem 0.2rem 0.4rem;
+}
+.btn-desinscribir.con-icono .bi {
+    font-size: 0.8rem;
+    margin-right: 0.3rem;
+}
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box{
+    width: 96%;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.label{
+    font-size: 14px;
+}
+
+.btn-add{
+    background-color: #020d19;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 20.5%;
+    min-width: 200px;
+    height: 40px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-add:hover{
+    background-color: #EC3136;
+    transition: all 0.2s;
+}
+
+.btn-submmit{
+    background-color: #020d19;
+    font-size: 15px;
+    width: 100%;
+    height: 40px;
+    transition: all 0.2s;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-submmit:hover{
+    background-color: #EC3136;
+    transition: all 0.2s;
+}
+
+
+td{
+    font-size: 15px;
+}
+
+.button{
+    width: 34px;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-bar{
+    max-width: 732px;
+    font-size: 15px; 
+
+}
+
+.input-group-text{
+    background-color: #020d19;
+    border: solid 1px #020d19;
+}
+
+/*Filtros && btn*/
+.filter{
+    background-color: #020d19;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.view{
+    background-color: #0A369D;
+}
+
+
+
+.participante{
+    background-color: #2ecc71;
+}
+
+.curso{
+    background-color: #2ecc71;
+}
+
+.edit{
+    background-color: #FFC857;
+}
+
+.delete{
+    background-color: #EC3136;
+}
+
+
+.container-textCurso{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/*Modales*/
+.delete-modal{
+    background-color: #EC3136;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 160px;
+    height: 35px;
+    border: none;
+    color: white;
+}
+
+.cancel-modal{
+    background-color: #020d19;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    color: white;
+}
+
+
+.pdf-modal{
+    background-color: #EC3136;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    color: white;
+}
+
+.pdf{
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #EC3136;
+    width: 90px;
+    height: 40px;
+    border: none;
+}
+
+.excel{
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #2ecc71;
+    width: 90px;
+    height:40px;
+    border: none;
+}
+
+.filters-container{
+    position: relative;
+}
+
+.doc-container{
+    position: absolute;
+    right: 280px;
+}
+
+.historial-modal{
+    background-color: #0A369D;
+    font-size: 15px;
+    border-radius: 4px;
+    width: 120px;
+    height: 35px;
+    border: none;
+    color: white;
+}
+
+
+.modal-section-title {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #6b6b6b;
+}
+
+
+#cursos-asociados .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#cursos-asociados .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para el contenedor de la imagen (icon-user) */
+.icon-user {
+    width: 50px;              /* Ajusta el tamaño del contenedor */
+    height: 50px;             /* Asegura que el contenedor tenga la misma altura que el ancho */
+    border-radius: 50%;       /* Hace la imagen completamente circular */
+    overflow: hidden;         /* Esconde cualquier parte de la imagen que sobresalga del círculo */
+    display: flex;            /* Centra la imagen dentro del contenedor */
+    justify-content: center;  /* Centra la imagen horizontalmente */
+    align-items: center;      /* Centra la imagen verticalmente */
+}
+
+/* Estilo para la imagen dentro del contenedor */
+.user-avatar {
+    width: 100%;              /* La imagen ocupará todo el espacio del contenedor */
+    height: 100%;             /* La imagen ocupará todo el espacio del contenedor */
+    object-fit: cover;        /* Hace que la imagen se recorte adecuadamente para que no se deforme */
+    border-radius: 50%;       /* Asegura que la imagen también sea circular */
+}
+
+/* Estilo para la imagen con error */
+.error-image {
+    object-fit: contain;      /* En caso de error, la imagen se ajustará dentro del contenedor sin recortarse */
+    width: 100%;              /* Asegura que la imagen con error ocupe todo el espacio disponible */
+    height: 100%;             /* Asegura que la imagen con error ocupe todo el espacio disponible */
+}
+
+
+@media (max-width: 1100px) {
+    .filters-container {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .btn-add {
+        margin-top: 20px; 
+        min-width: 280px;
+    }
+
+    .estatus-center{
+        text-align: center;
+    }
+}
+

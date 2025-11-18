@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Configuración Global */
+* {
+    font-family: "Roboto", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.no-transition * {
+    transition: none !important;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.wrapper{
+    display: flex;
+}
+
+.main{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #f7f7f7;
+}
+
+/*Barra lateral y menu*/
+
+#sidebar{
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: #020d19;
+}
+
+#sidebar.expand{
+    width: 260px;
+    min-width: 260px;
+}
+
+#toggle-btn{
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1.5rem 1.5rem;
+    margin-left: 6px;
+}
+
+.sidebar-logo{
+    margin: auto 0;
+}
+
+.sidebar-logo img{
+    margin-top: -10px;
+    width: 120px;
+}
+
+/*Imagen logo*/
+
+#sidebar:not(.expand) .sidebar-link span{
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-logo img {
+    opacity: 0;
+    transform: scale(0.8); /* Reduce ligeramente el tamaño para un efecto de "desaparición" */
+    transition: opacity 0.25s ease, transform 0.25s ease; /* Suaviza la transición */
+}
+
+#sidebar.expand .sidebar-logo img {
+    opacity: 1;
+    transform: scale(1); /* Devuelve al tamaño original */
+    transition: opacity 0.35s ease, transform 0.35s ease; /* Suaviza la transición */
+}
+
+
+.sidebar-nav{
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link{
+    padding: .625rem 1.625rem;
+    color: #fff;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link svg{
+    width: 25px;
+    height: 25px;
+    margin-right: 0.75rem;
+}
+
+.sidebar-link-logoht:hover svg{
+    color: #EC3136;
+}
+
+a.sidebar-link:hover{
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #EC3136;
+}
+
+.header{
+    height: 80px;
+    border-bottom: solid 1px rgba(0, 0, 0, .1);
+    background-color: #fff;
+}
+
+.user-info{
+    padding-top: 6px;
+    height: 55px;
+}
+
+.user-info h4{
+    font-size: 16px;
+}
+
+.user-info p{
+    font-size: 12px;
+}
+
+.icon-user {
+    width: 55px;              
+    height: 55px;             
+    border-radius: 100%;       
+    overflow: hidden;         
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+}
+
+/* Estilo para la imagen dentro del contenedor */
+.user-avatar {
+    width: 100%;             
+    height: 100%;             
+    object-fit: cover;        
+    border-radius: 100%;      
+}
+
+/* Estilo para la imagen con error */
+.error-image {
+    object-fit: contain;      
+    width: 100%;             
+    height: 100%;         
+}
+
+.main{
+    background-color: #f7f7f7;
+}
+
+.card{
+    border: none;
+    border-radius: 5px;
+}
+
+#myPieChart{
+    max-height: 400px;
+}
+
+#myChart{
+    max-height: 400px;
+}
+
+
+
+@media (max-width: 1250px) and (min-width: 1024px) {
+    .title h1{
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 1023px) and (min-width: 970px) {
+    .title h1{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .title h1{
+        font-size: 2rem;
+    }
+    
+    .user div{
+        display: none;
+    }
+
+    .user-info h4{
+        display: none;
+    }
+
+    .user-info p{
+        display: none;
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 70px;
+        min-width: 70px;
+    }
+
+    #sidebar.expand {
+        width: 260px;
+        min-width: 260px;
+    }
+
+}

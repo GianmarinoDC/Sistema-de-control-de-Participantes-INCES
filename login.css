@@ -1,0 +1,207 @@
+/* Definir la fuente Roboto Regular */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-Regular.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Definir la fuente Roboto Bold */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-Bold.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-Bold.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Definir la fuente Roboto Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-Italic.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-Italic.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Definir la fuente Roboto Bold Italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/static/Roboto-BoldItalic.ttf') format('truetype'),
+         url('../fonts/Roboto/static/Roboto-BoldItalic.woff2') format('woff2'),
+         url('../fonts/Roboto/static/Roboto-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Configuración Global */
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto */
+.texto {
+    font-size: 16px;
+    color: #333333;
+}
+
+.texto-input {
+    font-size: 18px;
+}
+
+.text-color {
+    color: #181818;
+}
+
+/* Inputs */
+.input {
+    border: none;
+    border: 1px solid #BBBBBB;
+    outline: none;
+    height: 45px;
+    font-size: 17px;
+    padding-left: 30px;
+}
+
+.container-icon {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top:10px;
+    left: 4px;
+}
+
+/* Login Container */
+.container-login {
+    padding: 30px;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Checkbox */
+
+.form-check {
+    padding-left: 40px;
+}
+
+
+
+.form-check-input:checked {
+    background-color: #EC3136;
+    border-color: #EC3136;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(236, 49, 54, 0.5);
+}
+
+.form-check-input {
+    width: 20px;          
+    height: 20px;       
+}
+
+
+.text-password {
+    margin-left: -18px;
+}
+
+/* Botón */
+.boton {
+    border: none;
+    background-color: #EC3136;
+    outline: none;
+    height: 45px;
+    font-size: 16px;
+    transition: 200ms;
+}
+
+.boton:hover {
+    background-color: #C1272B;
+    transition: 200ms;
+}
+
+/* Imagen de Fondo */
+.img-extend {
+    background-image: url('../img/login2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px; 
+}
+
+/* Logo */
+.inces__logo {
+    width: 280px;
+    position: absolute;
+    top: -125px;
+    left: 75px;
+}
+
+/* Estilos Responsivos */
+
+/* Pantallas Grandes: >= 1400px */
+@media (min-width: 1400px) {
+    .container-login {
+        max-width: 450px;
+        margin-top: 85px;
+    }
+
+    .img-extend {
+        height: 720px;
+        width: 520px;
+    }
+
+    h2{
+        font-size: 38px;
+    }
+
+    .text-password{
+        margin-left: 0px;
+    }
+}
+
+/* Pantallas Medianas: 1024px <= ancho < 1400px */
+@media (max-width: 1399px) and (min-width: 1024px) {
+    .container-login {
+        max-width: 560px;
+        padding: 40px 35px;
+    }
+
+    .img-extend {
+        height: 700px;
+    }
+
+    .inces__logo {
+        left: 50px;
+    }
+
+}
+
+/* Pantallas Medianas: 1024px <= ancho < 1400px */
+
+@media (max-width: 1400px) and (min-width: 1200px) {
+
+    .inces__logo {
+        left: 100px;
+    }
+
+}
+

@@ -1,0 +1,60 @@
+.filter-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-checkbox {
+  accent-color: #007bff; /* Color azul para el checkbox */
+  transform: scale(1.5); /* Hace el checkbox más grande */
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+}
+
+.form-check-label {
+  font-size: 0.85rem;
+}
+
+#filters .col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Agrupa checkbox + texto y los alinea horizontalmente */
+#filtersCursos label {
+  font-size: 0.85rem;
+  margin-right: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* reporte.css */
+.card-report {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-report:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.icono-reporte svg {
+  transition: transform 0.3s ease;
+}
+
+.card-report:hover .icono-reporte svg {
+  transform: scale(1.1);
+}
+
+/* Asegurar que las filas tengan el mismo alto */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
